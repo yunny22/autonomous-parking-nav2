@@ -34,10 +34,10 @@ only be added after redistribution permission is confirmed.
 ## Provenance, credits and license status
 
 The selected package history records the mission, validation, parking
-configuration and odometry integration under `as <as@local>`. Team permission to
-publish the retained project code is confirmed. Nav2, ROS 2, and sensor/vehicle
-drivers remain third-party dependencies and are not represented as newly
-implemented here.
+configuration and odometry integration under one local author identity. Team
+permission to publish the retained project code is confirmed. Nav2, ROS 2, and
+sensor/vehicle drivers remain third-party dependencies and are not represented
+as newly implemented here.
 
 No project LICENSE has been selected or included. The previous Apache-2.0 metadata
 has therefore been replaced with `LicenseRef-Pending-Selection`; this is a release
