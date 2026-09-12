@@ -36,7 +36,7 @@ setup(
         "Static-map LiDAR localization, Ackermann parking mission control, "
         "and fail-closed Xycar command adaptation."
     ),
-    license="LicenseRef-Pending-Selection",
+    license="UNLICENSED",
     entry_points={
         "console_scripts": [
             "cmd_vel_adapter = xycar_parking_nav.cmd_vel_adapter:main",

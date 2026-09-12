@@ -1,5 +1,9 @@
 # Kookmin Autonomous Parking (Nav2)
 
+This repository is provided for portfolio and research demonstration purposes.
+No separate open-source reuse license is granted; third-party dependencies keep
+their own terms.
+
 국민대학교 자율주차 대회를 위해 제공된 정적 지도를 사용해 waypoint 기반
 주차 미션을 구성한 ROS 2 패키지다. 이 저장소는 온라인 SLAM을 구현하는 예제가
 아니라, 미리 준비한 지도와 주행 중 위치 추정을 결합하는 자율주차 구조를

@@ -39,11 +39,10 @@ permission to publish the retained project code is confirmed. Nav2, ROS 2, and
 sensor/vehicle drivers remain third-party dependencies and are not represented
 as newly implemented here.
 
-No project LICENSE has been selected or included. The previous Apache-2.0 metadata
-has therefore been replaced with `LicenseRef-Pending-Selection`; this is a release
-blocker, not a license grant. Select and approve a project license for the
-team-authored source before publishing. The competition map remains excluded, so
-its venue/map redistribution right is not required for this public tree.
+No project LICENSE is included. Package metadata is `UNLICENSED` because this
+portfolio repository grants no separate open-source reuse license. Third-party
+dependency terms remain in force. The competition map remains excluded, so its
+venue/map redistribution right is not required for this public tree.
 
 ## Validation performed for staging
 

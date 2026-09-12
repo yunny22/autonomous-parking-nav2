@@ -4,7 +4,7 @@
   <version>0.1.0</version>
   <description>LiDAR localization and autonomous parking mission stack for Xycar.</description>
   <maintainer email="team.kai@example.com">Team K.A.I.</maintainer>
-  <license>LicenseRef-Pending-Selection</license>
+  <license>UNLICENSED</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
 
