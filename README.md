@@ -67,6 +67,33 @@ Gazebo와 별도의 임시 시험 환경에서는 waypoint 기반 주행을 확�
 주행을 안정적으로 재현하지 못했다. 이 저장소는 해당 경험을 숨기지 않고,
 실제 현장 재검증이 필요한 공개 후보로 제시한다.
 
+## Gazebo 검증 기록
+
+선정한 원본 source revision의 Gazebo 기록에서는 31개 mission goal을 모두
+완료했다. 가장 짧은 기록은 **105.1 s**였고, 같은 설정의 다른 기록은
+**113.6 s**였으며, 대회 제한 시간은 **180 s**였다. 이 수치는 원본 대회 설정의
+시뮬레이션 기록이며, 현재 공개본의 합성 지도 또는 실차 결과를 뜻하지 않는다.
+
+## My Contribution
+
+선정한 패키지의 source history에서 다음 공개 범위를 확인했다.
+
+- 31개 mission goal pose 구성과 순차 mission manager
+- Nav2 주차 설정과 Ackermann navigation integration
+- VESC 이동거리와 IMU yaw 기반 odometry integration
+- Gazebo 검증 코드와 실제 차량 통합 launch 구성
+- 실제 대회장의 Localization 불안정에 대한 주행 결과 정리
+
+## Team / Credits
+
+이 저장소는 국민대학교 자율주차 대회 프로젝트의 공개용 코드 정리본이다.
+ROS 2, Nav2, VESC·LiDAR driver는 별도 third-party dependency이며 이
+저장소에 vendoring하지 않았다. SmacPlannerHybrid, MPPIController와 AMCL은
+Nav2 ecosystem component로서, 이 프로젝트에서 새로 구현했다고 주장하지 않는다.
+
+프로젝트 코드의 공개에는 팀 동의가 확인됐다. 다만 공개 LICENSE의 선택은 아직
+정해지지 않았으므로, LICENSE가 정해질 때까지 이 저장소를 배포하지 않는다.
+
 ## 구조
 
 ```text
@@ -79,6 +106,5 @@ test/             알고리즘·설정 계약 테스트
 docs/             설계와 공개 범위 기록
 ```
 
-`xycar_msgs`, VESC·LiDAR 드라이버, Nav2는 별도 ROS 2 의존성이다. 이 패키지의
-mission·검증 로직은 개인 개발 범위에 해당하지만, 외부 드라이버와 Nav2 구현을
-새로 작성한 것으로 주장하지 않는다.
+Source revision, 공개 범위와 license 상태는
+[PUBLIC_RELEASE_NOTES.md](PUBLIC_RELEASE_NOTES.md)에 기록했다.

@@ -1,12 +1,15 @@
 # Public release staging notes
 
-## Source selection
+## Source revision
 
-The staging repository was extracted from the `xycar_parking_nav` package in the
-local Kookmin Gazebo workspace. Package history was inspected separately from the
-parent workspace; the parent workspace and unrelated projects were not copied.
-The source package had a local branch ahead of its remote, so this folder is a
-reviewable snapshot rather than a claim that the upstream repository is public.
+- Original package: `xycar_kookmin_gazebo_track/xycar_ws/src/xycar_parking_nav`
+- Original repository remote: `yunny22/kookmin_sim_to_real`
+- Source branch: `빠킹`
+- Selected source revision: `856b24f0c39fde0368fd7c98171fab2aa96d8eec`
+
+The source branch was five commits ahead of its remote-tracking branch when this
+public staging snapshot was audited. The parent workspace and unrelated projects
+were not copied; the original workspace remains unchanged.
 
 ## Included
 
@@ -28,13 +31,19 @@ reviewable snapshot rather than a claim that the upstream repository is public.
 The synthetic map is intentionally used as the default. The competition map should
 only be added after redistribution permission is confirmed.
 
-## Provenance and review items
+## Provenance, credits and license status
 
-The package history and core mission/validation logic provide evidence for a
-personal development contribution. Nav2, ROS 2, and sensor/vehicle drivers remain
-third-party dependencies and are not represented as newly implemented here.
-Before a public GitHub release, confirm map ownership, team/source licensing, and
-hardware revalidation on an authorized vehicle.
+The selected package history records the mission, validation, parking
+configuration and odometry integration under `as <as@local>`. Team permission to
+publish the retained project code is confirmed. Nav2, ROS 2, and sensor/vehicle
+drivers remain third-party dependencies and are not represented as newly
+implemented here.
+
+No project LICENSE has been selected or included. The previous Apache-2.0 metadata
+has therefore been replaced with `LicenseRef-Pending-Selection`; this is a release
+blocker, not a license grant. Select and approve a project license for the
+team-authored source before publishing. The competition map remains excluded, so
+its venue/map redistribution right is not required for this public tree.
 
 ## Validation performed for staging
 
