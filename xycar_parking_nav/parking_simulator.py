@@ -137,7 +137,7 @@ class ParkingSimulator(Node):
         self.declare_parameter("beam_count", 360)
         self.declare_parameter("motion_rate_hz", 50.0)
         self.declare_parameter("scan_rate_hz", 12.5)
-        self.declare_parameter("command_timeout_sec", 0.35)
+        self.declare_parameter("command_timeout_sec", 0.50)
 
     def _now_sec(self) -> float:
         return self.get_clock().now().nanoseconds * 1.0e-9

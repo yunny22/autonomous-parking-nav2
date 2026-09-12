@@ -71,7 +71,7 @@ def main(argv=None) -> int:
         type=Path,
         default=share / "config" / "parking_mission.yaml",
     )
-    parser.add_argument("--margin", type=float, default=0.095)
+    parser.add_argument("--margin", type=float, default=0.05)
     args = parser.parse_args(argv)
     report = validate(args.map, args.mission, args.margin)
     print(json.dumps(report, ensure_ascii=False, indent=2))
