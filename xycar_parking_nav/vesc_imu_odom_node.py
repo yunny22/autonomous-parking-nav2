@@ -208,7 +208,7 @@ class VescImuOdomNode(Node):
         self.declare_parameter("publish_tf", True)
         self.declare_parameter(
             "meters_per_tachometer_count",
-            0.002527806,
+            1.0,
         )
         self.declare_parameter("tachometer_sign", 1.0)
         self.declare_parameter("use_tachometer", True)
@@ -222,16 +222,16 @@ class VescImuOdomNode(Node):
         )
         self.declare_parameter("speed_scale", 1.0)
         self.declare_parameter("speed_offset_mps", 0.0)
-        self.declare_parameter("speed_deadband_mps", 0.02)
-        self.declare_parameter("maximum_speed_mps", 8.0)
-        self.declare_parameter("maximum_dt_sec", 0.10)
+        self.declare_parameter("speed_deadband_mps", 0.01)
+        self.declare_parameter("maximum_speed_mps", 2.0)
+        self.declare_parameter("maximum_dt_sec", 0.20)
         self.declare_parameter("imu_yaw_source", "gyro_z")
         self.declare_parameter("imu_yaw_sign", 1.0)
-        self.declare_parameter("gyro_yaw_sign", -1.0)
-        self.declare_parameter("gyro_yaw_scale", 0.955)
-        self.declare_parameter("gyro_z_bias_rad_s", 0.030)
-        self.declare_parameter("gyro_deadband_rad_s", 0.015)
-        self.declare_parameter("gyro_bias_adaptation_enabled", True)
+        self.declare_parameter("gyro_yaw_sign", 1.0)
+        self.declare_parameter("gyro_yaw_scale", 1.0)
+        self.declare_parameter("gyro_z_bias_rad_s", 0.0)
+        self.declare_parameter("gyro_deadband_rad_s", 0.01)
+        self.declare_parameter("gyro_bias_adaptation_enabled", False)
         self.declare_parameter(
             "gyro_bias_stationary_speed_mps",
             0.03,
@@ -242,16 +242,16 @@ class VescImuOdomNode(Node):
             "gyro_bias_max_residual_rad_s",
             0.08,
         )
-        self.declare_parameter("gyro_bias_vesc_timeout_sec", 0.25)
-        self.declare_parameter("imu_timeout_sec", 0.15)
-        self.declare_parameter("imu_hard_timeout_sec", 0.50)
-        self.declare_parameter("maximum_imu_yaw_step_rad", 0.35)
+        self.declare_parameter("gyro_bias_vesc_timeout_sec", 0.50)
+        self.declare_parameter("imu_timeout_sec", 0.50)
+        self.declare_parameter("imu_hard_timeout_sec", 1.0)
+        self.declare_parameter("maximum_imu_yaw_step_rad", 0.50)
         self.declare_parameter("require_initial_imu", True)
-        self.declare_parameter("pose_xy_variance", 0.04)
-        self.declare_parameter("pose_yaw_variance", 0.02)
-        self.declare_parameter("twist_linear_variance", 0.02)
-        self.declare_parameter("twist_yaw_variance", 0.03)
-        self.declare_parameter("stale_covariance_multiplier", 25.0)
+        self.declare_parameter("pose_xy_variance", 0.10)
+        self.declare_parameter("pose_yaw_variance", 0.10)
+        self.declare_parameter("twist_linear_variance", 0.05)
+        self.declare_parameter("twist_yaw_variance", 0.05)
+        self.declare_parameter("stale_covariance_multiplier", 10.0)
 
     def _on_imu(self, message: Imu) -> None:
         stamp_sec = _stamp_seconds(message.header.stamp)
