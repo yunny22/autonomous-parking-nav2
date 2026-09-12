@@ -1,0 +1,35 @@
+parking_cmd_vel_adapter:
+  ros__parameters:
+    use_sim_time: false
+    input_topic: /cmd_vel
+    motor_topic: /xycar_motor
+    shadow_topic: /parking/xycar_motor_shadow
+    authorization_topic: /parking/drive_authorized
+    scan_topic: /slam/scan_filtered
+    # Safe public default: commands are shadow-only until explicitly enabled.
+    drive_enabled: false
+    command_timeout_sec: 0.50
+    scan_timeout_sec: 0.50
+    timer_period_sec: 0.05
+    maximum_steering_command_rate: 120.0
+    steering_settle_tolerance_command: 3.0
+    direction_change_dwell_sec: 0.40
+    speed_gain_mps_per_command: 0.10
+    minimum_moving_command: 1.0
+    maximum_forward_command: 1.0
+    maximum_reverse_command: 1.0
+    steering_map_commands: [-1.0, 0.0, 1.0]
+    steering_map_curvatures: [1.0, 0.0, -1.0]
+    footprint_minimum_x: -0.40
+    footprint_maximum_x: 0.40
+    footprint_half_width: 0.25
+    collision_margin_m: 0.05
+    reaction_time_sec: 0.20
+    braking_deceleration_mps2: 1.0
+    minimum_projection_m: 0.10
+    maximum_projection_m: 0.80
+    projection_sample_step_m: 0.05
+    minimum_scan_points: 20
+    laser_x: 0.0
+    laser_y: 0.0
+    laser_yaw: 0.0

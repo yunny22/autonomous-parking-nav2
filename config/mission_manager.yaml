@@ -1,0 +1,25 @@
+parking_mission_manager:
+  ros__parameters:
+    navigate_to_pose_action: /navigate_to_pose
+    amcl_pose_topic: /amcl_pose
+    initial_pose_topic: /initialpose
+    authorization_topic: /parking/drive_authorized
+    state_topic: /parking/mission_state
+    goal_pose_array_topic: /parking/mission_goals
+    initial_pose_publish_count: 3
+    initial_pose_publish_period_sec: 0.25
+    maximum_xy_variance: 0.10
+    maximum_yaw_variance: 0.15
+    maximum_pose_age_sec: 1.0
+    maximum_position_jump_m: 1.0
+    maximum_yaw_jump_rad: 1.2
+    required_stable_samples: 3
+    localization_loss_cancel_sec: 1.0
+    goal_position_tolerance_m: 0.15
+    goal_yaw_tolerance_rad: 0.20
+    action_server_timeout_sec: 2.0
+    nav2_activation_timeout_sec: 15.0
+    retry_delay_sec: 0.50
+    mission_time_limit_sec: 180.0
+    time_warning_remaining_sec: 30.0
+    time_log_period_sec: 10.0

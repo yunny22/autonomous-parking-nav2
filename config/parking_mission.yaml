@@ -1,0 +1,43 @@
+mission:
+  frame_id: map
+  # Public template: competition-specific reference-to-base offsets are omitted.
+  base_from_reference_x_m: 0.0
+  initial_pose:
+    name: START
+    x: -1.5
+    y: -1.5
+    yaw: 0.0
+  # These 31 poses are synthetic examples that document the mission-manager
+  # contract. They are goal poses, not a hand-authored continuous trajectory.
+  steps:
+    - {name: LEG_01, x: -1.0, y: -1.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_02, x: -0.5, y: -1.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_03, x: 0.0, y: -1.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_04, x: 0.5, y: -1.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_05, x: 1.0, y: -1.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_06, x: 1.5, y: -1.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_07, x: 1.5, y: -1.0, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_08, x: 1.5, y: -0.5, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_09, x: 1.5, y: 0.0, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_10, x: 1.5, y: 0.5, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_11, x: 1.5, y: 1.0, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_12, x: 1.5, y: 1.5, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_13, x: 1.0, y: 1.5, yaw: 3.1416, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_14, x: 0.5, y: 1.5, yaw: 3.1416, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_15, x: 0.0, y: 1.5, yaw: 3.1416, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_16, x: -0.5, y: 1.5, yaw: 3.1416, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_17, x: -1.0, y: 1.5, yaw: 3.1416, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_18, x: -1.5, y: 1.5, yaw: 3.1416, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_19, x: -1.5, y: 1.0, yaw: -1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_20, x: -1.5, y: 0.5, yaw: -1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_21, x: -1.5, y: 0.0, yaw: -1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_22, x: -1.5, y: -0.5, yaw: -1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: LEG_23, x: -1.5, y: -1.0, yaw: -1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: A_ENTRY, x: -0.5, y: -0.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: A_PARK, x: 0.0, y: -0.5, yaw: 0.0, hold_sec: 3.0, parking_goal: true, maximum_retries: 3}
+    - {name: A_EXIT, x: 0.5, y: -0.5, yaw: 0.0, hold_sec: 0.15, maximum_retries: 2}
+    - {name: B_APPROACH, x: 0.5, y: 0.0, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: B_ENTRY, x: 0.5, y: 0.5, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: B_PARK, x: 0.5, y: 1.0, yaw: 1.5708, hold_sec: 3.0, parking_goal: true, maximum_retries: 3}
+    - {name: B_EXIT, x: 0.5, y: 1.5, yaw: 1.5708, hold_sec: 0.15, maximum_retries: 2}
+    - {name: START_RETURN, x: -1.5, y: -1.5, yaw: 3.1416, hold_sec: 1.0, maximum_retries: 3}

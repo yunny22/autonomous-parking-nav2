@@ -1,0 +1,49 @@
+vesc_imu_odom:
+  ros__parameters:
+    use_sim_time: false
+    vesc_topic: /vehicle/vesc_state
+    imu_topic: /imu
+    odom_topic: /slam/odom
+    odom_frame: slam_odom
+    base_frame: base_footprint
+    publish_tf: true
+    use_tachometer: true
+    # Replace these neutral values with a vehicle-specific calibration locally.
+    meters_per_tachometer_count: 1.0
+    tachometer_sign: 1.0
+    maximum_tachometer_step_counts: 1000.0
+    fallback_to_speed_on_tachometer_jump: true
+    speed_scale: 1.0
+    speed_offset_mps: 0.0
+    speed_deadband_mps: 0.01
+    maximum_speed_mps: 2.0
+    maximum_dt_sec: 0.20
+    imu_yaw_source: gyro_z
+    imu_yaw_sign: 1.0
+    gyro_yaw_sign: 1.0
+    gyro_yaw_scale: 1.0
+    gyro_z_bias_rad_s: 0.0
+    gyro_deadband_rad_s: 0.01
+    gyro_bias_adaptation_enabled: false
+    gyro_bias_stationary_speed_mps: 0.03
+    gyro_bias_stationary_hold_sec: 2.0
+    gyro_bias_time_constant_sec: 5.0
+    gyro_bias_max_residual_rad_s: 0.10
+    gyro_bias_vesc_timeout_sec: 0.50
+    imu_timeout_sec: 0.50
+    imu_hard_timeout_sec: 1.0
+    maximum_imu_yaw_step_rad: 0.50
+    require_initial_imu: true
+    pose_xy_variance: 0.10
+    pose_yaw_variance: 0.10
+    twist_linear_variance: 0.05
+    twist_yaw_variance: 0.05
+    stale_covariance_multiplier: 10.0
+
+parking_scan_filter:
+  ros__parameters:
+    use_sim_time: false
+    input_topic: /scan
+    output_topic: /slam/scan_filtered
+    minimum_range_m: 0.10
+    maximum_range_m: 8.0
