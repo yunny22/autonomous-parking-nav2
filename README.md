@@ -45,8 +45,8 @@ VESC 이동거리와 IMU gyro yaw를 이용해 odometry를 만들고, 2D LiDAR s
 ## 공개용 시뮬레이션
 
 `maps/example_map.yaml`과 `example_map.pgm`은 패키지 구조와 오프라인 검증을
-보여주기 위한 합성 예제 지도다. 실제 대회 지도는 사용 권한이 확인될 때까지
-공개 저장소 후보에서 제외했다. `parking_sim.launch.py`는 이 합성 지도를
+보여주기 위한 합성 예제 지도다. 실제 대회 지도는 포함하지 않았으며, 공개본은
+synthetic example map을 사용한다. `parking_sim.launch.py`는 이 합성 지도를
 사용하며 실차 모터 토픽으로 출력하지 않는다.
 
 ```bash
@@ -68,8 +68,8 @@ ros2 launch xycar_parking_nav parking_sim.launch.py
 Gazebo와 별도의 임시 시험 환경에서는 waypoint 기반 주행을 확인했지만, 실제
 대회장에서는 IMU 오차와 LiDAR–map 정합 불안정으로 AMCL Localization이 흔들렸다.
 현장 센서와 주행 파라미터를 충분히 다시 보정할 시간이 부족해 시험 환경의
-주행을 안정적으로 재현하지 못했다. 이 저장소는 해당 경험을 숨기지 않고,
-실제 현장 재검증이 필요한 공개 후보로 제시한다.
+주행을 안정적으로 재현하지 못했다. 이 저장소는 해당 경험을 기록하며,
+실제 현장 재검증이 필요한 한계가 남았다.
 
 ## Gazebo 검증 기록
 

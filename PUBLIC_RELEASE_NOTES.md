@@ -1,4 +1,4 @@
-# Public release staging notes
+# Public Release Notes
 
 ## Source revision
 
@@ -8,7 +8,7 @@
 - Selected source revision: `856b24f0c39fde0368fd7c98171fab2aa96d8eec`
 
 The source branch was five commits ahead of its remote-tracking branch when this
-public staging snapshot was audited. The parent workspace and unrelated projects
+public release was audited. The parent workspace and unrelated projects
 were not copied; the original workspace remains unchanged.
 
 ## Included
@@ -44,7 +44,7 @@ portfolio repository grants no separate open-source reuse license. Third-party
 dependency terms remain in force. The competition map remains excluded, so its
 venue/map redistribution right is not required for this public tree.
 
-## Validation performed for staging
+## Validation performed for public release
 
 YAML/XML/Python syntax and unit tests are run from this clean folder. The ROS build
 and launch checks depend on the host's installed ROS 2/Nav2 and external Xycar
