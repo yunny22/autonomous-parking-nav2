@@ -95,8 +95,9 @@ ROS 2, Nav2, VESC·LiDAR driver는 별도 third-party dependency이며 이
 저장소에 vendoring하지 않았다. SmacPlannerHybrid, MPPIController와 AMCL은
 Nav2 ecosystem component로서, 이 프로젝트에서 새로 구현했다고 주장하지 않는다.
 
-프로젝트 코드의 공개에는 팀 동의가 확인됐다. 다만 공개 LICENSE의 선택은 아직
-정해지지 않았으므로, LICENSE가 정해질 때까지 이 저장소를 배포하지 않는다.
+프로젝트 코드의 공개와 팀 동의가 확인된 공개용 정리본이다. 별도 오픈소스 재사용
+라이선스는 부여하지 않으며, ROS 2·Nav2·VESC·LiDAR driver 등 외부 의존성은
+각자의 라이선스 조건을 따른다.
 
 ## 구조
 
